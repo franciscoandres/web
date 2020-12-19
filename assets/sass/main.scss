@@ -1,0 +1,71 @@
+$backgroundColor: #16161a;
+$fontColor: rgb(235, 225, 225);
+$linkColor: #2cb67d;
+$headlineColor: #fffffe;
+$paragraphColor: #94a1b2;
+
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $backgroundColor;
+  color: $fontColor;
+  max-width: 33rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+a {
+  color: $linkColor;
+
+  &:hover {
+    color: darken($color: $linkColor, $amount: 15);
+  }
+}
+
+p {
+  font-size: 20px;
+}
+
+h1 {
+  color: $headlineColor;
+}
+
+p {
+  color: $paragraphColor;
+}
+
+nav a {
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+article h1 {
+  margin-bottom: 0;
+}
+
+article p {
+  margin-top: 0;
+}
+
+#tags a {
+  margin-right: .5rem;
+}

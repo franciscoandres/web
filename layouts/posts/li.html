@@ -1,0 +1,10 @@
+<li>
+  <a href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">
+    {{ .Title }}
+  </a>
+  <time datetime="{{ .Date.Format "January 2, 2006" }}">
+    <small>
+      {{ .Date.Format "January 2, 2006" }}
+    </small>
+  </time>
+</li>

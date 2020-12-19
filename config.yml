@@ -1,0 +1,31 @@
+baseURL: "/"
+languageCode: "en-us"
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "Posts"
+      url: "posts/"
+      weight: 5
+    - name: "Projects"
+      url: "projects/"
+      weight: 7
+    - name: "Now"
+      url: "now/"
+      weight: 9
+
+params:
+  author: "Francisco Gonzalez"
+  description: "Backend developer, focus on creating fast, secure and trustworthy web apps"
+  cvLink: "https://drive.google.com/file/d/1494mwC7Z4xxNQSCe8eWHPdJEV-zjr5pw/view?usp=sharing"
+
+pygmentsCodefences: true
+pygmentsCodefencesGuessSyntax: true
+pygmentsStyle: "vim"
+
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5

@@ -1,0 +1,10 @@
+<footer>
+  <small>
+    Last updated on {{ .Site.LastChange.Format "January 2, 2006" }}
+  </small>
+</footer>
+
+{{ $env := getenv "HUGO_ENV" }}
+{{ if (eq $env (or "production" "prod")) }}
+	{{ partial "analytics.html" . }}
+{{ end }}

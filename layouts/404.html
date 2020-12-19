@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <main>
+    <h1>
+      404 page not found...
+    </h1>
+    <p>...but let me show you some posts</p>
+    {{ $randomPosts := shuffle (where .Site.RegularPages "Type" "posts") | first 5 }}
+    <ul>
+      {{ range $randomPosts }}
+        <li>
+          <a href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">
+            {{ .Title }}
+          </a>
+          <time datetime="{{ .Date.Format "January 2, 2006" }}">
+            <small>
+              {{ .Date.Format "January 2, 2006" }}
+            </small>
+          </time>
+        </li>
+      {{ end }}
+    </ul>
+  </main>
+{{ end }}

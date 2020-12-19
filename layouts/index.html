@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <main>
+    <h1>
+      {{ .Site.Params.author }}
+    </h1>
+    <p>
+      {{ .Site.Params.description }}
+    </p>
+    <a href="{{ .Site.Params.cvLink | safeURL }}" title="See and download my CV">
+      See and download my CV
+    </a>
+    {{ partial "latest-posts" . }}
+  </main>
+{{ end }}

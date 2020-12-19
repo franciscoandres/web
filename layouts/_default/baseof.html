@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="{{ cond (eq .IsHome true) .Site.Params.description .Summary | truncate 160 }}">
+  {{ with .Site.Params.author }}
+    <meta name="author" content="{{ . }}">
+  {{ end }}
+  <meta property="og:site_name" content="{{ .Site.Params.author }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:title" content="{{ cond (eq .IsHome false) (printf `%s | %s` .Title .Site.Params.author) .Site.Params.author }}">
+	{{ with .OutputFormats.Get "RSS" -}}
+		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Params.author | safeHTML }}
+	{{- end }}
+  {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+  {{ $styles := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+	<link rel="stylesheet" href="{{ $styles.Permalink }}">
+  {{/*  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  */}}
+  <title>
+    {{ cond (eq .IsHome false) (printf `%s | %s` .Title .Site.Params.author) .Site.Params.author }}
+  </title>
+</head>
+<body>
+  {{ partial "nav" . }}
+  {{ block "main" . }} {{ end }}
+  {{ partial "footer" . }}
+</body>
+</html>

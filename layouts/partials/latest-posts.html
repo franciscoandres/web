@@ -1,0 +1,19 @@
+<aside>
+  <p>
+    Latest posts
+  </p>
+  <ul>
+    {{ range first 5 (where .Site.RegularPages "Type" "in" "posts") }}
+      <li>
+        <a href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">
+          {{ .Title }}
+        </a>
+        <time datetime="{{ .Date.Format "January 2, 2006" }}">
+          <small>
+            {{ .Date.Format "January 2, 2006" }}
+          </small>
+        </time>
+      </li>
+    {{ end }}
+  </ul>
+</aside>

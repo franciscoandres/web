@@ -1,0 +1,22 @@
+{{ define "main" }}
+  {{ if or .Title .Content }}
+    {{ with .Title }}
+      <h1>
+        {{ . }}
+      </h1>
+    {{ end }}
+    {{ with .Content }}
+      {{ . }}
+    {{ end }}
+  {{ end }}
+  <ul>
+    {{ range .Pages.ByTitle }}
+      <li>
+        <time datetime="{{ .Date.Format "January 2, 2006" }}">
+          {{ .Date.Format "January 2, 2006" }}
+        </time>
+        {{ .Render "summary" }}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
