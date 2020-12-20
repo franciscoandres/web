@@ -7,9 +7,9 @@
       <!-- <time datetime="{{ .Date.Format "January 2, 2006" }}">
         {{ .Date.Format "January 2, 2006" }}
       </time> -->
-      <p id="tags">
+      <p>
         {{ range .Params.tags }}
-          <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
+          <a class="article-tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
             {{ . }}
           </a>
         {{ end }}

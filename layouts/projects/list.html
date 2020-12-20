@@ -4,7 +4,7 @@
       {{ .Title }}
     </h1>
     {{ .Content }}
-    <ul>
+    <ul class="projects-ul">
       {{ range .Pages.ByTitle }}
         {{ .Render "li" }}
       {{ end }}
