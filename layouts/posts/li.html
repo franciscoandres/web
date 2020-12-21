@@ -1,7 +1,9 @@
-<li>
-  <a href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">
-    {{ .Title }}
-  </a>
+<li class="mb4">
+  <h3 class="dib mb0">
+    <a href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">
+      {{ .Title }}
+    </a>
+  </h3>
   <time datetime="{{ .Date.Format "January 2, 2006" }}">
     <small>
       {{ .Date.Format "January 2, 2006" }}

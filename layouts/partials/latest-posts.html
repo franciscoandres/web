@@ -2,7 +2,7 @@
   <p>
     Latest posts
   </p>
-  <ul>
+  <ul class="list-unstyled">
     {{ range first 5 (where .Site.RegularPages "Type" "in" "posts") }}
       <li>
         <a href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">

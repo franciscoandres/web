@@ -2,7 +2,7 @@
   <main>
     <h1>{{ .Title }}</h1>
     {{ .Content }}
-    <ul>
+    <ul class="list-unstyled">
       {{ range .Pages }}
         {{ .Render "li" }}
       {{ end }}
