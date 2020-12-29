@@ -86,3 +86,19 @@ article p {
   list-style-type: none;
   padding-left: 0;
 }
+
+.grid-projects {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  .grid-projects {
+    display: grid;
+    grid-template-columns: auto;
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
+}

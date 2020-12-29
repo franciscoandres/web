@@ -10,12 +10,14 @@
     {{ end }}
   {{ end }}
   <ul>
-    {{ range .Pages.ByTitle }}
+    {{ range .Pages.ByDate }}
       <li>
-        <time datetime="{{ .Date.Format "January 2, 2006" }}">
-          {{ .Date.Format "January 2, 2006" }}
-        </time>
         {{ .Render "summary" }}
+        <small>
+          <time datetime="{{ .Date.Format "January 2, 2006" }}">
+            {{ .Date.Format "January 2, 2006" }}
+          </time>
+        </small>
       </li>
     {{ end }}
   </ul>
