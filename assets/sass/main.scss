@@ -1,8 +1,8 @@
-$backgroundColor: #16161a;
+$backgroundColor: #0a0a0c;
 $fontColor: #fff;
-$linkColor: #2cb67d;
+$linkColor: #728de7;
 $headlineColor: #fffffe;
-$paragraphColor: #94a1b2;
+$paragraphColor: #ebeef3;
 
 html {
   box-sizing: border-box;
@@ -89,9 +89,13 @@ article p {
 
 .grid-projects {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   column-gap: 2rem;
-  row-gap: 1rem;
+  row-gap: 2.5rem;
+}
+
+.highlight {
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 400px) {
