@@ -1,9 +1,11 @@
 <li>
-  <h3>{{ .Title }}</h3>
+  <p>
+    <b>{{ .Title }}</b>
+  </p>
   {{ range .Params.tags }}
-    <a class="tag mr05" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
-      {{ . }}
-    </a>
-  {{ end }}
+  <a class="tag mr05" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
+    {{ . }}
+  </a>
+{{ end }}
   {{ .Content }}
 </li>
