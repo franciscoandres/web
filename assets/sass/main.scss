@@ -1,8 +1,9 @@
-$backgroundColor: #0a0a0c;
+$backgroundColor: #0C0910;
 $fontColor: #fff;
-$linkColor: #728de7;
+$linkColor: #91E5F6;
 $headlineColor: #fffffe;
 $paragraphColor: #ebeef3;
+$maxWidth: 43.75rem;
 
 html {
   box-sizing: border-box;
@@ -17,7 +18,7 @@ html {
 body {
   background-color: $backgroundColor;
   color: $fontColor;
-  max-width: 45rem;
+  max-width: $maxWidth;
   margin: 0 auto;
   padding: 2rem 1rem;
   line-height: 1.5;
@@ -35,6 +36,7 @@ h1 {
 
 a {
   color: $linkColor;
+  text-decoration: none;
 
   &:hover {
     color: darken($color: $linkColor, $amount: 15);
@@ -78,6 +80,10 @@ article p {
   margin-right: .5rem;
 }
 
+.mt2 {
+  margin-top: 2rem;
+}
+
 .mb4 {
   margin-bottom: 4rem;
 }
@@ -85,6 +91,19 @@ article p {
 .list-unstyled {
   list-style-type: none;
   padding-left: 0;
+}
+
+.tag {
+  background-color: rgba(223, 59, 87, .8);
+  display: inline-block;
+  padding: .125rem .250rem;
+  border-radius: 4px;
+  color: white;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .grid-projects {

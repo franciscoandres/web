@@ -1,5 +1,5 @@
 {{ with .Site.Menus.main }}
-  <nav>
+  <nav class="mb4 mt2">
     {{ range . }}
       <a href="{{ .URL | relURL | safeURL }}" title="{{ .Name }}">
         {{ .Name }}
