@@ -9,7 +9,7 @@
       </time> -->
       <p>
         {{ range .Params.tags }}
-          <a class="mr05" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
+          <a class="tag mr05" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
             {{ . }}
           </a>
         {{ end }}

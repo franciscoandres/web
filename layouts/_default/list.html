@@ -9,7 +9,7 @@
       {{ . }}
     {{ end }}
   {{ end }}
-  <ul>
+  <ul class="list-unstyled">
     {{ range .Pages.ByDate }}
       <li>
         {{ .Render "summary" }}
