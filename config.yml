@@ -6,8 +6,8 @@ menu:
     - name: "Home"
       url: "/"
       weight: 1
-    - name: "Posts"
-      url: "posts/"
+    - name: "Blog"
+      url: "blog/"
       weight: 5
     - name: "Projects"
       url: "projects/"

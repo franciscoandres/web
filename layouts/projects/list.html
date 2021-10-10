@@ -4,9 +4,11 @@
       {{ .Title }}
     </h1>
     {{ .Content }}
-    <ul class="list-unstyled grid-projects">
+    <ul class="list-unstyled">
       {{ range .Pages.ByTitle }}
         {{ .Render "li" }}
+        <br />
+        <br />
       {{ end }}
     </ul>
   </main>

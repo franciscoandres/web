@@ -1,9 +1,9 @@
 <aside>
   <p>
-    Latest posts
+    Newest posts
   </p>
   <ul class="list-unstyled">
-    {{ range first 5 (where .Site.RegularPages "Type" "in" "posts") }}
+    {{ range first 5 (where .Site.RegularPages "Type" "in" "blogs") }}
       <li>
         <a href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">
           {{ .Title }}
