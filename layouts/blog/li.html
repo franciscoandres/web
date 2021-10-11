@@ -1,12 +1,13 @@
 <li>
   <p>
+    <time datetime="{{ .Date.Format "January 2, 2006" }}">
+      <small>
+        <i>{{ .Date.Format "January 2, 2006" }}</i>
+      </small>
+    </time>
+    <br />
     <a class="title" href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">
       {{ .Title }}
     </a>
   </p>
-  <time datetime="{{ .Date.Format "January 2, 2006" }}">
-    <small>
-      {{ .Date.Format "January 2, 2006" }}
-    </small>
-  </time>
 </li>
