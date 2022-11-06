@@ -3,16 +3,16 @@ languageCode: "en-us"
 
 menu:
   main:
-    - name: "Home"
+    - name: "/home"
       url: "/"
       weight: 1
-    - name: "Blog"
+    - name: "/blog"
       url: "blog/"
       weight: 5
-    - name: "Projects"
+    - name: "/projects"
       url: "projects/"
       weight: 7
-    - name: "Now"
+    - name: "/now"
       url: "now/"
       weight: 9
 

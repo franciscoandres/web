@@ -3,7 +3,7 @@
     <b>{{ .Title }}</b>
   </p>
   {{ range .Params.tags }}
-    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
+    <a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
       {{ . }}
     </a>
   {{ end }}
