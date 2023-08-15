@@ -2,18 +2,17 @@
   <p>
     Newest posts
   </p>
-  <ul class="list-unstyled">
     {{ range first 5 (where .Site.RegularPages "Type" "in" "blogs") }}
-      <li>
-        <a href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">
-          {{ .Title }}
-        </a>
-        <time datetime="{{ .Date.Format "January 2, 2006" }}">
-          <small>
-            {{ .Date.Format "January 2, 2006" }}
-          </small>
-        </time>
-      </li>
+    <div>
+      <a href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">
+        {{ .Title }}
+      </a>
+      <time datetime="{{ .Date.Format "January 2, 2006" }}">
+        <small>
+          {{ .Date.Format "January 2, 2006" }}
+        </small>
+      </time>
+    </div>
+    <br />
     {{ end }}
-  </ul>
 </aside>

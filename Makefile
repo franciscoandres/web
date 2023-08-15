@@ -20,4 +20,4 @@ createproject:
 # make runserver
 runserver:
 	@echo "Running Hugo server..."
-	hugo serve --debug --gc --disableFastRender
+	hugo serve --logLevel debug --gc --disableFastRender
