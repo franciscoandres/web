@@ -4,15 +4,14 @@
   </p>
     {{ range first 5 (where .Site.RegularPages "Type" "in" "blogs") }}
     <div>
+      <time datetime="{{ .Date.Format "January 2, 2006" }}">
+        <small>
+          {{ .Date.Format "Jan 2, 2006" }}
+        </small>
+      </time>
       <a href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">
         {{ .Title }}
       </a>
-      <time datetime="{{ .Date.Format "January 2, 2006" }}">
-        <small>
-          {{ .Date.Format "January 2, 2006" }}
-        </small>
-      </time>
     </div>
-    <br />
     {{ end }}
 </aside>

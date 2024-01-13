@@ -1,11 +1,5 @@
-<li>
-  <p>
+<section>
+  <a href="{{ .Permalink | relURL | safeURL }}">
     <b>{{ .Title }}</b>
-  </p>
-  {{ range .Params.tags }}
-    <a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
-      {{ . }}
-    </a>
-  {{ end }}
-  {{ .Content }}
-</li>
+  </a>
+</section>

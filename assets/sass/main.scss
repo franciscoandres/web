@@ -1,12 +1,9 @@
-$backgroundColor: #0C0910;
-$fontColor: #fff;
-$linkColor: #91E5F6;
 $maxWidth: 43.75rem;
 
 html {
   box-sizing: border-box;
   font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
 }
 
 *, *:before, *:after {
@@ -14,43 +11,25 @@ html {
 }
 
 body {
-  background-color: black;
+  background-color: #111;
   color: white;
-  max-width: $maxWidth;
   padding: 2rem 1rem;
   line-height: 1.5;
+  max-width: $maxWidth;
 }
 
 a {
-  color:lightcoral;
+  display: inline-block;
+
+  &:link {
+    color: darksalmon;
+  }
 
   &:visited {
-    color: lightgreen;
+    color: lightblue;
   }
 }
 
 p {
   line-height: 1.5;
-}
-
-.menu-item {
-  margin-right: .5rem;
-  text-decoration: none;
-}
-
-.tag {
-  margin-right: .5rem;
-}
-
-.title {
-  font-size: 1.8rem;
-}
-
-.subtitle {
-  font-size: 1.3rem;
-}
-
-.list-unstyled {
-  list-style-type: none;
-  padding-left: 0;
 }

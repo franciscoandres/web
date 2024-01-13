@@ -3,22 +3,22 @@ languageCode: "en-us"
 
 menu:
   main:
-    - name: "/home"
+    - name: "home"
       url: "/"
       weight: 1
-    - name: "/blog"
+    - name: "blog"
       url: "blog/"
       weight: 5
-    - name: "/projects"
+    - name: "projects"
       url: "projects/"
       weight: 7
-    - name: "/now"
+    - name: "now"
       url: "now/"
       weight: 9
 
 params:
   author: "Francisco Gonzalez"
-  description: "developer"
+  description: "Developer, Linux and PostgreSQL enthusiast"
   cvLink: "https://drive.google.com/file/d/1494mwC7Z4xxNQSCe8eWHPdJEV-zjr5pw/view?usp=sharing"
 
 pygmentsCodefences: true
