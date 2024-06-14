@@ -14,7 +14,7 @@ createpost:
 # make createproject title="project's title"
 createproject:
 	@echo "Creating project..."
-	hugo new projects/$(title).
+	hugo new projects/$(title).md
 	
 gitpush:
 	git status
