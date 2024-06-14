@@ -3,12 +3,12 @@
     Newest posts
   </p>
     {{ range first 5 (where .Site.RegularPages "Type" "in" "blogs") }}
-    <div>
-      <time datetime="{{ .Date.Format "January 2, 2006" }}">
+    <div style="margin-bottom: 0.5rem;">
+      <!-- <time datetime="{{ .Date.Format "January 2, 2006" }}">
         <small>
           {{ .Date.Format "Jan 2, 2006" }}
         </small>
-      </time>
+      </time> -->
       <a href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">
         {{ .Title }}
       </a>

@@ -1,1 +1,0 @@
-html{box-sizing:border-box;font-size:18px;font-family:monospace}*,*:before,*:after{box-sizing:inherit}body{background-color:#111;color:#fff;padding:2rem 1rem;line-height:1.5;max-width:43.75rem}a{display:inline-block}a:link{color:#e9967a}a:visited{color:#add8e6}p{line-height:1.5}

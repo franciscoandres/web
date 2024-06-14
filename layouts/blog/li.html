@@ -1,9 +1,9 @@
-<div>
-  <time datetime="{{ .Date.Format "January 2, 2006" }}">
+<div style="margin-bottom: 0.5rem;">
+  <!-- <time datetime="{{ .Date.Format "January 2, 2006" }}">
     <small>
       <i>{{ .Date.Format "Jan 2, 2006" }}</i>
     </small>
-  </time>
+  </time> -->
   <a class="title" href="{{ .Permalink | relURL | safeURL }}" title="{{ .Title }}">
     {{ .Title }}
   </a>

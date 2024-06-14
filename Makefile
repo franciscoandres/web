@@ -14,7 +14,13 @@ createpost:
 # make createproject title="project's title"
 createproject:
 	@echo "Creating project..."
-	hugo new projects/$(title).md
+	hugo new projects/$(title).
+	
+gitpush:
+	git status
+	git add .
+	git commit -m "Changes"
+	git push
 
 # How to use:
 # make runserver
