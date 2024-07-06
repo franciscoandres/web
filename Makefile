@@ -16,6 +16,8 @@ createproject:
 	@echo "Creating project..."
 	hugo new projects/$(title).md
 	
+# How to use:
+# make gitpush
 gitpush:
 	git status
 	git add .
@@ -26,4 +28,4 @@ gitpush:
 # make runserver
 runserver:
 	@echo "Running Hugo server..."
-	hugo serve --logLevel debug --gc --disableFastRender
+	rm -r public; hugo serve --logLevel debug --gc --disableFastRender

@@ -1,0 +1,12 @@
+{{- $csvFile := .Get "file" -}}
+{{- $csvContent := readFile $csvFile -}}
+{{- $csvLines := split $csvContent "\n" -}}
+
+<div>
+    {{ range $csvLines }}
+        {{- $columns := split . "," -}}
+        {{ range $columns }}
+            <p><i>{{ . }}</i></p>
+        {{ end }}
+    {{ end }}
+</div>
