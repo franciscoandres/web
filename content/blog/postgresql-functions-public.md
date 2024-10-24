@@ -32,4 +32,4 @@ So, it is pointed out in the [documentation](https://www.postgresql.org/docs/cur
 Another point to keep in mind is that by default, execute privilege is granted to PUBLIC for newly created functions (see Section 5.8 for more information). Frequently you will wish to restrict use of a security definer function to only some users. To do that, you must revoke the default PUBLIC privileges and then grant execute privilege selectively. To avoid having a window where the new function is accessible to all, create it and set the privileges within a single transaction. 
 </blockquote>
 
-Good to know that _not all_ objects inside a new schema (that is not the schema _public_), will be available even if you not grant explicit permissions for the user.
+Good to know that there's objects inside a new schema (that is not the schema _public_), that will be available even if you not grant explicit permissions for the user.
