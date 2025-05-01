@@ -1,8 +1,8 @@
 {{ with .Site.Menus.main }}
   <nav>
     {{ range . }}
-      <a class="menu-item" href="{{ .URL | relURL | safeURL }}" title="{{ .Name }}">
-        {{ .Name }}
+      <a class="near-black dim link mr2" href="{{ .URL | relURL | safeURL }}" title="{{ .Name }}">
+        /{{ .Name }}
       </a>
     {{ end }}
   </nav>

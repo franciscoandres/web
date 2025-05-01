@@ -1,15 +1,18 @@
 {{ define "main" }}
   <main>
-    <h1 class="title">
-      {{ .Site.Params.author }}
-    </h1>
-    <p class="subtitle">
-      <i>{{ .Site.Params.description }}</i>
-    </p>
-    <!-- <a href="{{ .Site.Params.cvLink | safeURL }}" title="See and download my CV">
-      See and download my CV
-    </a> -->
-    <br />
-    {{ partial "latest-posts" . }}
+    <div>
+      <header class="mb3 flex-ns items-center-ns justify-between-ns">
+        <h1>
+          {{ .Site.Params.author }}
+        </h1>
+      </header>
+      <!-- <a href="{{ .Site.Params.cvLink | safeURL }}" title="See and download my CV">
+        See and download my CV
+      </a> -->
+      <h1 class="mb4">
+        {{ .Site.Params.description }}
+      </h1>
+      {{ partial "latest-posts" . }}
+    </div>
   </main>
 {{ end }}

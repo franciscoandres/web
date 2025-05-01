@@ -1,35 +1,35 @@
-$maxWidth: 43.75rem;
+// $maxWidth: 43.75rem;
 
-html {
-  box-sizing: border-box;
-  font-size: 18px;
-  font-family: monospace;
-}
+// html {
+//   box-sizing: border-box;
+//   font-size: 18px;
+//   font-family: monospace;
+// }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+// *, *:before, *:after {
+//   box-sizing: inherit;
+// }
 
-body {
-  background-color: #111;
-  color: white;
-  padding: 2rem 1rem;
-  line-height: 1.5;
-  max-width: $maxWidth;
-}
+// body {
+//   background-color: #111;
+//   color: white;
+//   padding: 2rem 1rem;
+//   line-height: 1.5;
+//   max-width: $maxWidth;
+// }
 
-a {
-  display: inline-block;
+// a {
+//   display: inline-block;
 
-  &:link {
-    color: darksalmon;
-  }
+//   &:link {
+//     color: darksalmon;
+//   }
 
-  &:visited {
-    color: lightblue;
-  }
-}
+//   &:visited {
+//     color: lightblue;
+//   }
+// }
 
-p {
-  line-height: 1.5;
-}
+// p {
+//   line-height: 1.5;
+// }

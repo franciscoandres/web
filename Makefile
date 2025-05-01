@@ -2,7 +2,7 @@
 # make install
 install:
 	@echo "Installing Hugo..."
-	snap install hugo --channel=extended
+	sudo apt install hugo -y
 
 # How to use:
 # make createpost title="post's title"
@@ -28,4 +28,4 @@ gitpush:
 # make runserver
 runserver:
 	@echo "Running Hugo server..."
-	rm -r public; hugo serve --logLevel debug --gc --disableFastRender
+	rm -rf public; hugo serve --gc --disableFastRender

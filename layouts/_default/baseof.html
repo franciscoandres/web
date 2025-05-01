@@ -18,13 +18,21 @@
   {{ $styles := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 	<link rel="stylesheet" href="{{ $styles.Permalink }}">
   {{/*  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  */}}
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+  <style type="text/css">
+    .highlight pre {
+      overflow-x: scroll;
+    }
+  </style>
   <title>
     {{ cond (eq .IsHome false) (printf `%s | %s` .Title .Site.Params.author) .Site.Params.author }}
   </title>
 </head>
-<body>
-  {{ partial "nav" . }}
-  {{ block "main" . }} {{ end }}
-  {{ partial "footer" . }}
+<body class="sans-serif bg-near-white near-black">
+  <div class="w-90 w-40-ns center pa3">
+    {{ partial "nav" . }}
+    {{ block "main" . }} {{ end }}
+    {{ partial "footer" . }}
+  </div>
 </body>
 </html>
